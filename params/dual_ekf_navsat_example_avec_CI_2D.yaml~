@@ -13,11 +13,11 @@ ekf_se_odom:
   base_link_frame: base_link
   world_frame: odom
 
-  odom0: odometry/wheel
+  odom0: odometry/command
   odom0_config: [false, false, false,
                  false, false, false,
                  true , false, false,
-                 false, false, true,
+                 false, false, false,
                  false, false, false]
   odom0_queue_size: 10
   odom0_nodelay: true
@@ -73,7 +73,7 @@ ekf_se_odom:
 ekf_se_map:
   frequency: 30
   sensor_timeout: 0.1
-  two_d_mode: false
+  two_d_mode: true
   transform_time_offset: 0.0
   print_diagnostics: true
   debug: false
@@ -83,11 +83,11 @@ ekf_se_map:
   base_link_frame: base_link
   world_frame: odom
 
-  odom0: odometry/wheel
+  odom0: odometry/command
   odom0_config: [false, false, false,
                  false, false, false,
-                 true, false, false,
-                 false, false, true,
+                 true , false, false,
+                 false, false, false,
                  false, false, false]
   odom0_queue_size: 10
   odom0_nodelay: true
